@@ -2,7 +2,7 @@ import React from 'react'
 
 const Content = (props) => {
     return (
-        <div className="text-center">
+        <div className="text-center-direction">
             <h3>
                 {props.userName}<span className="font-weight-light">, {props.age}</span>
             </h3>

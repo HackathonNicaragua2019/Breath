@@ -1,17 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{useContext} from 'react';
+// import './App.css';
+import Header from './Componentes/Header';
+import Footer from './Componentes/Footer';
+import Content from './Componentes/Content';
+import Chat from './Componentes/Chat/Chat';
+import Home from './Componentes/Home/Home';
+import {Router,Redirect} from '@reach/router'
+import Profile from './Componentes/Profile/Profile';
+import NotFound from './pages/404';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-     
-      </header>
+      
+      <Header></Header>
+      {/* <Chat/> */}
+ 
+      <Router>
+        <Content path='/' />
+        <Home path="/home" />
+        <Profile path="/profile" /> 
+        <NotFound default/>
+     </Router>
+     <Footer></Footer>
     </div>
   );
 }

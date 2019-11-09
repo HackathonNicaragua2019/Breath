@@ -2,6 +2,7 @@ import React,{useContext,Fragment} from 'react'
 import { UserContext } from './../Providers/UserProvider'
 import {Link} from '@reach/router'
 import { signOut} from './../firebase';
+
 const Header=()=>{
      const user = useContext(UserContext);
    

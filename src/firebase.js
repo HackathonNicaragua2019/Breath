@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore"; // NEW
 import "firebase/auth";
 import "firebase/storage";
+const uuidv4 = require('uuid/v4');
 
 const config = {
   apiKey: "AIzaSyA8iodjNHv3v9P6ENy9BqzL3aRywmDouwM",
@@ -44,6 +45,7 @@ export const createUserDocument = async (user, additionalData) => {
     const createdAt = new Date();
     try {
       await userRef.set({
+        uid:user.uid,
         displayName,
         email,
         photoURL,

@@ -19,6 +19,7 @@ function App() {
  
       <Router>
         <Content path='/' />
+        <Chat path="/chat/:id" ></Chat>
         <Home path="/home" />
         <Profile path="/profile" /> 
         <NotFound default/>

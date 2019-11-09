@@ -4,7 +4,10 @@ import HeaderSearch from './components/Header_Search'
 import Mensajes from './components/Mensajes'
 import './style.css'
 
-const Chat = () => {
+const Chat = (props) => {
+
+   console.log(props.id)
+
     return (
         <div className="container">
             <h3 className="text-center">Messaging</h3>
@@ -23,4 +26,4 @@ const Chat = () => {
     )
 }
 
-export default Chat
+export default Chat;

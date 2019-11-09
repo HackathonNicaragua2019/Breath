@@ -4,14 +4,14 @@ import SocialData from './Aside_Card/Social_Data'
 import Content from './Aside_Card/Content'
 import Buttons from './Aside_Card/Buttons'
 
-const AsideCard = (props) => {
+const AsideCard = ({photo,name}) => {
     return (
 
         <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
             <div class="card card-profile shadow">
 
                 <Img
-                    img="https://pbs.twimg.com/profile_images/1183511104795893761/h2mm3nv__400x400.jpg"
+                    img={photo}
                 />
 
                 <Buttons/>
@@ -24,7 +24,7 @@ const AsideCard = (props) => {
                     />
 
                     <Content
-                        userName="Engels Prado"
+                        userName={name}
                         age="22"
                         location="Bucharest, Romania"
                         job="Solution Manager - Creative Tim Officer"

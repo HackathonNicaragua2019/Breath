@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext,useEffect } from 'react'
 import { Redirect } from '@reach/router'
 import './style.css'
 import { UserContext } from './../../Providers/UserProvider'
@@ -14,6 +14,7 @@ import './style.css'
 const Profile = () => {
     const user = useContext(UserContext);
 
+    console.log(user)
     return (
         <Fragment>
             {
@@ -22,8 +23,8 @@ const Profile = () => {
                     <Fragment>
                         <div class="main-content">
                             <Nav
-                                img="https://pbs.twimg.com/profile_images/1183511104795893761/h2mm3nv__400x400.jpg"
-                                userName="Engels Prado (Prodigio)" />
+                                img={user.photoURL}
+                                userName={user.displayName} />
 
                             <Presentation
                                 fullName="Engels"
@@ -32,7 +33,7 @@ const Profile = () => {
                             <div class="container-fluid mt--7">
                                 <div class="row">
 
-                                    <AsideCard />
+                                    <AsideCard photo={user.photoURL} name={user.displayName} />
                                     <MyAccount />
                                 </div>
                             </div>

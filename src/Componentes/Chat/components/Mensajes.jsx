@@ -1,8 +1,28 @@
-import React from 'react'
+import React,{useEffect,useState,useContext} from 'react'
 import MsgIn from './Msg_in'
 import MsgOut from './Msg_out'
+import {firestore,getUserDocument,auth} from './../../../firebase'
+import { UserContext } from './../../../Providers/UserProvider'
 
-const Mensajes = () => {
+const Mensajes = (props) => {
+
+  const [content,setContent]=useState('')
+ 
+  const user = useContext(UserContext);
+   
+
+
+   const send= ()=>{
+     
+          
+     console.log(user)
+       
+
+     
+   } 
+
+
+
     return (
         <div class="mesgs">
             <div class="msg_history">
@@ -38,8 +58,8 @@ const Mensajes = () => {
 
             <div class="type_msg">
                 <div class="input_msg_write">
-                    <input type="text" class="write_msg" placeholder="Type a message" />
-                    <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                    <input value={content} onChange={(e)=>{setContent(e.target.value)}} type="text" class="write_msg" placeholder="Type a message" />
+                    <button onClick={send}  class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>

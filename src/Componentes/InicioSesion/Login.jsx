@@ -8,12 +8,12 @@ const Login= ()=>{
      return (
       <Fragment>
 
-<div class="container">
+<div class="container m-auto">
     <div class="row">
-        <div class="col-md-3 col-md-offset-4">
+        <div class="col-md-3 col-md-offset-4 caja-logo">
             <div class="account-box">
                 <div class="logo ">
-                    <img src="http://placehold.it/90x38/fff/6E329D&text=LOGO" alt=""/>
+                    <img src="/img/logo.png" alt="" className="logo_imagen"/>
                 </div>
                 <form class="form-signin" action="#">
                 <div class="form-group">

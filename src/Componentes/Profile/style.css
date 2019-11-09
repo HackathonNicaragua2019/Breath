@@ -1983,3 +1983,9 @@ p {
 #navbar .navbar {
     margin-bottom: 20px;
 }
+
+.text-center-direction{
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center;
+}

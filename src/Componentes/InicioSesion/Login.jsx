@@ -22,7 +22,7 @@ const Login= ()=>{
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="Password" required />
                 </div>
-                <label class="checkbox">
+                <label class="checkbox centrar">
                     <input type="checkbox" value="remember-me" />
                     Keep me signed in
                 </label>

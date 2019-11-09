@@ -22,8 +22,9 @@
     margin-top: 10px;
 }
    
-button{
-  /*  background-color: #5edfff !important;*/
+.btn-button{
+    border: unset;
+    background-color: #5edfff !important;
     border-radius: 10px !important;
     border-color: #5edfff !important;
 }

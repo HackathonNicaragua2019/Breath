@@ -12,12 +12,14 @@ const Mensajes = (props) => {
    
 
 
-   const send= ()=>{
+   const send=async ()=>{
      
-          
-     console.log(user)
-       
+     let tuid='4VZwzSZdynYn6LgccGtBde36BLb2'
 
+     let datos=  await firestore.collection("users").doc(tuid).get() 
+     console.log(datos.data()) 
+     console.log(user)
+     console.log("tuid"+tuid) 
      
    } 
 

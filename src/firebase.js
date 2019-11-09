@@ -29,11 +29,10 @@ export const signOut = () => auth.signOut();
 export const createUserDocument = async (user, additionalData) => {
   // If there is no user, let's not do this.
   if (!user) return;
-  
-  const id=uuidv4()
+
   // Get a reference to the location in the Firestore where the user
   // document may or may not exist.
-  const userRef = firestore.doc(`users/${id}`);
+  const userRef = firestore.doc(`users/${user.uid}`);
 
   // Go and fetch a document from that location.
   const snapshot = await userRef.get();
@@ -46,7 +45,7 @@ export const createUserDocument = async (user, additionalData) => {
     const createdAt = new Date();
     try {
       await userRef.set({
-        uid:id,
+        uid:user.uid,
         displayName,
         email,
         photoURL,
@@ -60,7 +59,7 @@ export const createUserDocument = async (user, additionalData) => {
 
   // Get the document and return it, since that's what we're
   // likely to want to do next.
-  return getUserDocument(id);
+  return getUserDocument(user.uid);
 };
 
 export const getUserDocument = async uid => {

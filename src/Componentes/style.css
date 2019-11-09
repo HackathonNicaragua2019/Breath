@@ -31,7 +31,7 @@
 
 .btn-light.action-button.btn{
 
-  background: #1b2a49;
+  background: #0d6ea9;
   color: #fff; 
   display: inline-block;
   font-size: 14px; 
@@ -49,4 +49,17 @@
 
   width: 100px;
 
+}
+
+.btn-light.action-button.btn.inicio{
+  width: 380px;
+  padding: 10px 5px;
+
+
+}
+
+.btn-light.action-button.btn.crear{
+
+  width: 380px;
+  padding: 10px 5px;
 }

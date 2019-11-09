@@ -23,7 +23,7 @@
 }
    
 button{
-    background-color: #5edfff !important;
+  /*  background-color: #5edfff !important;*/
     border-radius: 10px !important;
     border-color: #5edfff !important;
 }

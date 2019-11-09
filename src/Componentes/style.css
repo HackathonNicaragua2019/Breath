@@ -4,11 +4,12 @@
     height:77%;
     top:12%;
     border-radius:2px;
-    left:6%;
+    left:7.2%;
     border:1px solid #444;
     overflow:hidden;
-    background:url('/img/screen-content-iphone-6.jpg') center;
-    background-size:cover}
+    background:url('/img/Foto.jpg') center;
+    background-position: center center;
+    background-size:100%;}
 
 
 .header-blue .iphone-mockup .screen:before{content:'';background-color:#fff;position:absolute;width:90%;height:140%;top:-12%;right:-60%;transform:rotate(-19deg);opacity:.2}

@@ -1,11 +1,11 @@
 import React from 'react'
-
+import {Link} from '@reach/router'
 function Info(props) {
     return (
         <div className="col-md-3">
             <div className="card card-css">
                 <div className="card-body">
-                    <div className="h5">{props.userName}</div>
+                  <Link to={`/profile/${props.id}`} >  <div className="h5">{props.userName}</div></Link>
                     <div className="h7 color_t">{props.fullName}</div>
                     <div className="h7">{props.description}</div>
                 </div>

@@ -19,7 +19,8 @@ const Home =()=>{
             <div class="container-fluid gedf-wrapper">
                 <div class="row">
                 <Info 
-                    userName="@LeeCross"
+                    userName={user.displayName}
+                    id={user&&user.uid}
                     fullName="Fullname : Miracles Lee Cross"
                     description="Developer of web applications, JavaScript, PHP, Java, Python, Ruby, Java, Node.js,
                     etc."

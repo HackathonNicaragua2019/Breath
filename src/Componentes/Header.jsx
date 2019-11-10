@@ -21,9 +21,9 @@ const Header=()=>{
               <div class="collapse navbar-collapse"
                   id="navcol-1">
                   <ul class="nav navbar-nav">
-                      <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Link</a></li>
-                      <li class="dropdown nav-item"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" href="#">Dropdown </a>
-                          <div role="menu" class="dropdown-menu"><a role="presentation" class="dropdown-item" href="#">First Item</a><a role="presentation" class="dropdown-item" href="#">Second Item</a><a role="presentation" class="dropdown-item" href="#">Third Item</a></div>
+                      <li role="presentation" class="nav-item"></li>
+                      <li class="dropdown nav-item"><img data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link rounded" src={ user && user.photoURL}></img>
+                          <div  class="dropdown-menu"><Link role="presentation" class="dropdown-item" to={`/profile/${user&&user.uid}`} >Mi perfil</Link><a role="presentation" class="dropdown-item" href="#">Configuracion de privacidad</a></div>
                       </li>
                   </ul>
                   <form class="form-inline mr-auto" target="_self">

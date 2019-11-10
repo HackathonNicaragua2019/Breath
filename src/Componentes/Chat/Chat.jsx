@@ -24,7 +24,7 @@ const Chat = (props) => {
                         <HeaderSearch />
                         <ChatList />
                     </div>
-                    <Mensajes user={user && user}/>
+                    <Mensajes user={user && user} para={props.id} />
                 </div>
                 <p className="text-center top_spac"> Design by <a target="_blank" href="/">Hooks</a></p>
             </div>

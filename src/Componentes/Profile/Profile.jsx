@@ -33,7 +33,7 @@ const Profile = ({uid}) => {
 
        getDatos()
         
-    })
+    },[])
     
 
     return (
@@ -54,7 +54,7 @@ const Profile = ({uid}) => {
                             <div class="container-fluid mt--7">
                                 <div class="row">
 
-                                    <AsideCard photo={perfil.photoURL} name={perfil.displayName} />
+                                    <AsideCard uid={uid} photo={perfil.photoURL} name={perfil.displayName} />
                                     <MyAccount />
                                 </div>
                             </div>

@@ -27,7 +27,7 @@ const Home =()=>{
                     following="6758"
                     contact="Vestibulum at eros"
                 />
-                <Publication/>
+                <Publication user={user} />
                 <AsideInfo/>
                 </div>
             </div>

@@ -21,7 +21,7 @@ function App() {
         <Content path='/' />
         <Chat path="/chat/:id" ></Chat>
         <Home path="/home" />
-        <Profile path="/profile" /> 
+        <Profile path="/profile/:uid" /> 
         <NotFound default/>
      </Router>
      <Footer></Footer>

@@ -21,7 +21,7 @@ const Chat = (props) => {
                 <div className="inbox_msg">
                     <div className="inbox_people">
                         <HeaderSearch />
-                        <ChatList />
+                        <ChatList id={user && user.uid} />
                     </div>
                     <Mensajes user={user && user} para={props.id} />
                 </div>

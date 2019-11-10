@@ -3,7 +3,7 @@ import MsgIn from './Msg_in'
 import MsgOut from './Msg_out'
 import {firestore,getUserDocument,auth} from './../../../firebase'
 import { UserContext } from './../../../Providers/UserProvider'
-
+import moment from 'moment'
 
 const Mensajes = (props) => {
 
@@ -49,12 +49,12 @@ const Mensajes = (props) => {
     
                     }
                     }
-    
+                    document.getElementsByClassName('mesgs').scrollTop=document.getElementsByClassName('mesgs').scrollHeight
     
               }
  
                getChats() 
-
+              
 
             },[props.user,user])
 
@@ -84,28 +84,44 @@ const Mensajes = (props) => {
         recibido:tuid,
         createdAt:  Math.round((new Date()).getTime() / 1000)
     })
-           
+        
+   
+        //Enviar una notificacion al usuario que se le esta enviando un mensaje 
+        firestore.collection("users").doc(myid).collection("bandeja").doc(tuid).set({
+            content,
+            createdAt:   Math.round((new Date()).getTime() / 1000),
+            id:tuid,
+            name:datos.data().displayName,
+            photo:datos.data().photoURL
+         })
+         firestore.collection("users").doc(tuid).collection("bandeja").doc(myid).set({
+           content,
+           createdAt:   Math.round((new Date()).getTime() / 1000),
+            id:myid,
+            name:user.displayName,
+            photo:user.photoURL
+        })
      
    } 
 
 
 
     return (
-        <div class="mesgs">
-            <div class="msg_history">
+        <div class="mesgs" >
+            <div className="msg_history" >
               {
                   chats && chats.docs.map(data=>{
-                      console.log(data.data())
+                  //    console.log(data.data())
                        let el=data.data()
                     return el.enviado==user.uid?  <MsgOut
                     img="https://ptetutorials.com/images/user-profile.png"
                     message={el.content}
-                    time="11:01 AM"
-                    date="June 9"
+                    time={moment(new Date(el.createdAt *1000)).fromNow()}
+                   
                 />: <MsgIn
                 message={el.content}
-                time="11:01 AM"
-                date="June 9"
+                time={moment(new Date(el.createdAt *1000)).fromNow()}
+               
             />
                
                  

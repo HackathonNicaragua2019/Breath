@@ -11,8 +11,7 @@ const Chat = (props) => {
    
    const user = useContext(UserContext);
 
-  
-    
+
 
     return (
         <div className="container">

@@ -39,7 +39,7 @@ const Mensajes = (props) => {
                         
                     if (myid!==tuid){
     
-                        datos= await  firestore.collection("chat").doc(clave).collection("chats").onSnapshot(ch=>{
+                        datos= await  firestore.collection("chat").doc(clave).collection("chats").orderBy("createdAt").onSnapshot(ch=>{
                            
                              // console.log(ch.)
                               setChats(ch)

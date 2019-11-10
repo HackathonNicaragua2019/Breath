@@ -14,7 +14,7 @@ const Publication = ({user}) => {
   
     async function getData(){
 
-       let posts=await firestore.collection("posts").onSnapshot(post=>{
+       let posts=await firestore.collection("posts").orderBy("createdAt").onSnapshot(post=>{
         setPost(post)
         console.log(post)
        })

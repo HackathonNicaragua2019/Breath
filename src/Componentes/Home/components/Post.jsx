@@ -52,8 +52,8 @@ const Post = (props) => {
 
     return (
         <Fragment>
-            <div class="card gedf-card">
-                <div class="card-header">
+            <div class="card gedf-card post_card">
+                <div class="card-header estilos-post">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="mr-2">
@@ -80,7 +80,7 @@ const Post = (props) => {
                         </div>
 
                     </div>
-                    <div class="card-body">
+                    <div class="card-body estilos-post">
                         <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{props.timeShared}</div>
                         <a class="card-link" href="/">
                             <h5 class="card-title">{props.linkPrincipal}</h5>
@@ -90,7 +90,7 @@ const Post = (props) => {
                             {props.content}
                         </p>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer estilos-post">
                         <a href="/" class="card-link"><i class="fa fa-gittip"></i> Like</a>
                         <a class="card-link" data-toggle="collapse" href={`#${id}`} role="button" aria-expanded="false" aria-controls="collapseExample">
                         <i class="fa fa-comment"></i> Comment

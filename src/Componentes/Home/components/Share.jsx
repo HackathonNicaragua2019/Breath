@@ -32,7 +32,7 @@ const Share = () => {
     console.log(share)
     return (
         <Fragment>
-            <div className="card gedf-card">
+            <div className="card gedf-card card-share">
                 <div className="card-header">
                     <ul className="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                         <li className="nav-item">

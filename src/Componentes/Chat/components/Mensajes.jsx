@@ -39,14 +39,13 @@ const Mensajes = (props) => {
                         
                     if (myid!==tuid){
     
-                        datos= await  firestore.collection("chat").doc(clave).collection("chats").get()
-    
-                        let getD= datos.docs.map(chat=>{
-                          return  chat.data()
+                        datos= await  firestore.collection("chat").doc(clave).collection("chats").onSnapshot(ch=>{
+                           
+                             // console.log(ch.)
+                              setChats(ch)
                         })
-
-                        console.log(getD)
-                        setChats(getD)
+    
+                       
     
                     }
                     }
@@ -95,9 +94,9 @@ const Mensajes = (props) => {
         <div class="mesgs">
             <div class="msg_history">
               {
-                  chats && chats.map(el=>{
-                      console.log(el)
-
+                  chats && chats.docs.map(data=>{
+                      console.log(data.data())
+                       let el=data.data()
                     return el.enviado==user.uid?  <MsgOut
                     img="https://ptetutorials.com/images/user-profile.png"
                     message={el.content}

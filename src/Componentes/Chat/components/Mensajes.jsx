@@ -7,19 +7,70 @@ import { UserContext } from './../../../Providers/UserProvider'
 const Mensajes = (props) => {
 
   const [content,setContent]=useState('')
- 
+  const [chats,setChats]=useState(null)
   const user = useContext(UserContext);
+  const [id,setId]=useState(user.uid)                                       
+
+   useEffect(()=>{
+
+    async function getChats(){
+       
+      console.log(id)   
+     let tuid='6a84686b-c022-438f-9a55-066e69643838' //Se recibira como parametro
+     let myid=user.uid 
+     let clave
+     let datos
+     console.log(datos.data()) 
+     console.log(user)
+     console.log("tuid"+tuid) 
+
+
+     if(myid<tuid){
+       clave=myid+tuid
+     }else 
+          clave=tuid+myid
+
+      
+     if (myid!==tuid){
+
+       datos= await firestore.collection("chat").doc(clave).collection("chats").get()
+
+       console.log(datos) 
+
+     }
+
+    } 
    
+     getChats()
+
+   })
 
 
    const send=async ()=>{
      
-     let tuid='4VZwzSZdynYn6LgccGtBde36BLb2'
-
+     let tuid='6a84686b-c022-438f-9a55-066e69643838'
+     let myid=user.uid 
+     let clave
      let datos=  await firestore.collection("users").doc(tuid).get() 
      console.log(datos.data()) 
      console.log(user)
      console.log("tuid"+tuid) 
+
+
+     if(myid<tuid){
+       clave=myid+tuid
+     }else 
+          clave=tuid+myid
+
+    console.log(clave)
+      
+    firestore.collection("chat").doc(clave).collection("chats").add({
+        content,
+        enviado:myid,
+        recibido:tuid,
+        createdAt:  Math.round((new Date()).getTime() / 1000)
+    })
+           
      
    } 
 

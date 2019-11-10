@@ -26,8 +26,8 @@ const AsideCard = ({photo,name,uid}) => {
                     <Content
                         userName={name}
                         age="22"
-                        location="Bucharest, Romania"
-                        job="Solution Manager - Creative Tim Officer"
+                        location="Nicaragua - Managua"
+                        job="Estudiante y aficionado en tecnologías web"
                         education="University of Computer Science"
                         description="Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music."
                     />

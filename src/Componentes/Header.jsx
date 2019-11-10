@@ -10,7 +10,7 @@ const Header=()=>{
       
      const Auth=()=>{
         return user ? <button class="btn-light action-button btn" onClick={signOut} >Salir</button>:<Fragment>
-        <button class="btn-light action-button btn" to="/login" >Log In</button><button class=" btn btn-light action-button" role="button" to="/login">Sign Up</button>     
+        <button class="btn-light action-button btn" to="/login" >Inicior sesion</button><button class=" btn btn-light action-button" role="button" to="/login">Regístrate</button>     
         </Fragment>
      }
 

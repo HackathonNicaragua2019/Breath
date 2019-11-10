@@ -15,20 +15,20 @@ return (
                 <div class="row">
                  
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
+                        <h3>Servicios</h3>
                         <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Diseñador Web</a></li>
+                            <li><a href="#">Desarrollador</a></li>
                             <li><a href="#">Hosting</a></li>
                         </ul>
                     </div>
                  
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
+                        <h3>Acerca de </h3>
                         <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Empresa</a></li>
+                            <li><a href="#">Comunidad</a></li>
+                            <li><a href="#">Carreras</a></li>
                         </ul>
                     </div>
                  

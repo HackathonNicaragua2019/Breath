@@ -72,10 +72,10 @@ const Post = (props) => {
                                         <i class="fa fa-ellipsis-h"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                        <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="#">Save</a>
-                                        <a class="dropdown-item" href="#">Hide</a>
-                                        <a class="dropdown-item" href="#">Report</a>
+                                        <div class="h6 dropdown-header">Configuración</div>
+                                        <a class="dropdown-item" href="#">Guardar</a>
+                                        <a class="dropdown-item" href="#">Esconder</a>
+                                        <a class="dropdown-item" href="#">Reportar</a>
                                     </div>
                                 </div>
                             </div>
@@ -93,15 +93,15 @@ const Post = (props) => {
                         </p>
                     </div>
                     <div class="card-footer estilos-post">
-                        <a href="/" class="card-link"><i class="fa fa-gittip"></i> Like</a>
+                        <a href="/" class="card-link"><i class="fa fa-gittip"></i> Me gusta</a>
                         <a class="card-link" data-toggle="collapse" href={`#${id}`} role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fa fa-comment"></i> Comment
+                        <i class="fa fa-comment"></i> Comentar
                         </a>
 
                         <div class="collapse" id={id}>
                         <div class="card card-body">
                              <div className="form-group">
-                                <label className="sr-only" for="message">post</label>
+                                <label className="sr-only" for="message">enviar</label>
                                 <textarea value={coment} onChange={(evt=>{setComent(evt.target.value)})} className="form-control" id="message" rows="3" placeholder="What are you thinking?"></textarea>
                                 <button onClick={comentar}  type="button" class="btn btn-outline-info">Comentar</button>
                             </div>
@@ -135,7 +135,7 @@ const Post = (props) => {
                             </div>
                         </div>
                       
-                        <a href="/" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a href="/" class="card-link"><i class="fa fa-mail-forward link-compartir"></i> Compartir</a>
                     </div>
                 </div>
         </Fragment>

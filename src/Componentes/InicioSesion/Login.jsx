@@ -17,21 +17,21 @@ const Login= ()=>{
                 </div>
                 <form class="form-signin" action="#">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Email" required autofocus />
+                    <input type="text" class="form-control" placeholder="Correo" required autofocus />
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required />
+                    <input type="password" class="form-control" placeholder="Contraseña" required />
                 </div>
                 <label class="checkbox centrar">
                     <input type="checkbox" value="remember-me" />
-                    Keep me signed in
+                    Mantenme conectado
                 </label>
                 <button class="btn-light action-button btn inicio" type="submit">
-                    Sign in</button>
+                    Registrarme</button>
                 </form>
-                <a class="forgotLnk " href="http://www.jquery2dotnet.com">I can't access my account</a>
+                <a class="forgotLnk " href="http://www.jquery2dotnet.com">No puedo acceder a mi cuenta</a>
                 <div class="or-box">
-                    <span class="or">OR</span>
+                    <span class="or">o</span>
                     <div class="row">
                         <div class="col-md-6 row-block">
                             <button   onClick={signInWithFacebook} class="btn btn-facebook btn-block">Facebook</button>
@@ -44,7 +44,7 @@ const Login= ()=>{
                 <div class="or-box row-block">
                     <div class="row">
                         <div class="col-md-12 row-block">
-                            <a href="http://www.jquery2dotnet.com" class="btn-light action-button btn crear">Create New Account</a>
+                            <a href="http://www.jquery2dotnet.com" class="btn-light action-button btn crear">Crear nueva cuenta</a>
                         </div>
                     </div>
                 </div>

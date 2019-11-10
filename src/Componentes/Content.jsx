@@ -31,33 +31,33 @@ const Content=()=>{
         <div class="container">
       
             <div class="intro">
-                <h2 class="text-center">Features</h2>
+                <h2 class="text-center">Caracteristicas</h2>
                 <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
             </div>
        
             <div class="row features">
                 <div class="col-sm-6 col-md-4 item"><i class="fa fa-map-marker icon"></i>
-                    <h3 class="name">Works everywhere</h3>
+                    <h3 class="name">Trabajo libre</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
                 </div>
                 <div class="col-sm-6 col-md-4 item"><i class="fa fa-clock-o icon"></i>
-                    <h3 class="name">Always available</h3>
+                    <h3 class="name">Siempre habilitado</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
                 </div>
                 <div class="col-sm-6 col-md-4 item"><i class="fa fa-list-alt icon"></i>
-                    <h3 class="name">Customizable</h3>
+                    <h3 class="name">Personalizable</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
                 </div>
                 <div class="col-sm-6 col-md-4 item"><i class="fa fa-leaf icon"></i>
-                    <h3 class="name">Organic</h3>
+                    <h3 class="name">Organico</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
                 </div>
                 <div class="col-sm-6 col-md-4 item"><i class="fa fa-plane icon"></i>
-                    <h3 class="name">Fast</h3>
+                    <h3 class="name">Rapido</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
                 </div>
                 <div class="col-sm-6 col-md-4 item"><i class="fa fa-phone icon"></i>
-                    <h3 class="name">Mobile-first</h3>
+                    <h3 class="name">Primero Movil</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
                 </div>
             </div>
@@ -69,7 +69,7 @@ const Content=()=>{
         <div class="container">
         
             <div class="intro">
-                <h2 class="text-center">Testimonials </h2>
+                <h2 class="text-center">Testimonios </h2>
                 <p class="text-center">Our customers love us! Read what they have to say below. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
             </div>
         

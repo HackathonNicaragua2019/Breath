@@ -11,12 +11,12 @@ const NotFound = () => (
         <h1 className="text-error er">ERROR !</h1>
         <h4 className="text-nf">PAGE NOT FOUND</h4>
 
-        <p>The page you were looking for doesn't exist or was removed.
-            <br/>Try to go Home.
+        <p>La pagina que esta buscando no existe o fue removida
+            <br/>Volver a Home
         </p>
 
         <Link to="/">
-            <button className="btn btn-primary btn-button">HOME PAGE</button>
+            <button className="btn btn-primary btn-button">Página de Inicio</button>
         </Link>
         </div>
     </div>

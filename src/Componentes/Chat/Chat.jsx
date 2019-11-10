@@ -15,7 +15,7 @@ const Chat = (props) => {
 
     return (
         <div className="container">
-            <h3 className="text-center">Messaging</h3>
+            <h3 className="text-center">Mensajería</h3>
 
             <div className="messaging">
                 <div className="inbox_msg">

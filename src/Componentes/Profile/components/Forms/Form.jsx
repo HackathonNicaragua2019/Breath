@@ -6,7 +6,7 @@ import Form3 from './Form3'
 const Form = () => {
     return (
         <form>
-            <h6 class="heading-small text-muted mb-4">User information</h6>
+            <h6 class="heading-small text-muted mb-4">Informacion de Usuario</h6>
             <Form1
                 userName="lucky.jesse"
                 firstName="Lucky"
@@ -14,7 +14,7 @@ const Form = () => {
             />
             <hr class="my-4" />
 
-            <h6 class="heading-small text-muted mb-4">Contact information</h6>
+            <h6 class="heading-small text-muted mb-4">Informacion de contacto</h6>
             <Form2
                 address="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
                 city="New York"
@@ -22,7 +22,7 @@ const Form = () => {
             />
             <hr class="my-4" />
 
-            <h6 class="heading-small text-muted mb-4">About me</h6>
+            <h6 class="heading-small text-muted mb-4">Sobre mi</h6>
             <Form3
                 content = "A beautiful Dashboard for Bootstrap 4. It is Free and Open Source."
             />

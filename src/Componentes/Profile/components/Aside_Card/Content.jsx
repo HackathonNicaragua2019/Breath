@@ -14,7 +14,7 @@ const Content = (props) => {
             <div><i className="ni education_hat mr-2"></i>{props.education}</div>
             <hr className="my-4" />
             <p>{props.description}</p>
-            <a href="/profile">Show more</a>
+            <a href="/profile">Mostrar mas</a>
         </div>
     )
 }

@@ -21,3 +21,57 @@
     content: none;
     display: none;
 }
+
+.card-css{
+    box-shadow: 0px 0px 2px 0px #1da1f2;
+}
+
+.card-css .card-body, .card-css li{
+    background-color: #e5f6ff;
+}
+
+.card-css .h5{
+    font-size: 22px;
+}
+
+.card .h7, .card h6, .card-css .h6{
+    font-size: 15px;
+}
+
+.card-share .card-header{
+    border: 1px solid rgba(0,0,0,.125);
+    background-color: #edf8ff;
+}
+
+.card-share .card-body{
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.list-last{
+    font-size: 15px;
+}
+
+.card-title{
+    font-size: 15px;
+}
+
+.texto-card{
+    font-size: 15px;
+}
+
+.estilos-post{
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.post_card .card-header{
+    background-color:#edf8ff !important;
+}
+
+.h7{
+    color: #1a1f22 !important;
+}
+
+.color_t{
+    color: #0d6ea9 !important;
+}
+

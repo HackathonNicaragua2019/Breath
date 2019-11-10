@@ -5,8 +5,8 @@ const Aside_Info = () => {
     return (
         <div class="col-md-3">
             <AsideCard
-                title = "Titulo de tarjeta"
-                subtitle = "Subtítulo de tarjeta"
+                title = "Psicologa"
+                subtitle = "Miley"
                 content = "Some quick example text to build on the card title and make up the bulk of the cards content"
             />
             <AsideCard

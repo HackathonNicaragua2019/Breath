@@ -10,6 +10,7 @@ const Mensajes = (props) => {
   const [content,setContent]=useState('')
   const [chats,setChats]=useState(null)
   const user = useContext(UserContext);
+  console.log(props.id)
   //const [id,setId]=useState(props.user.uid)                                       
 
       
@@ -21,7 +22,7 @@ const Mensajes = (props) => {
                 
                 if( props.user && props.user.uid!==null){
                     
-                    let tuid='6a84686b-c022-438f-9a55-066e69643838' //Se recibira como parametro
+                    let tuid=props.para //Se recibira como parametro
                     let myid=props.user.uid
                     let clave
                     let datos
@@ -62,7 +63,7 @@ const Mensajes = (props) => {
 
    const send=async ()=>{
      
-     let tuid='6a84686b-c022-438f-9a55-066e69643838'
+     let tuid=props.para
      let myid=user.uid 
      let clave
      let datos=  await firestore.collection("users").doc(tuid).get() 

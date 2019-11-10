@@ -32,7 +32,7 @@ const Publication = ({user}) => {
                   console.log(post.data())
                   let data=post.data()
                  return <Post
-                  link={user.id}
+                  link={data.user.uid}
                   id={data.id} 
                   userImage = {data.user.photoURL}
                   userName = {data.user.displayName}

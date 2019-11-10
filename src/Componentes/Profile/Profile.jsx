@@ -33,7 +33,7 @@ const Profile = ({uid}) => {
 
        getDatos()
         
-    })
+    },[])
     
 
     return (
@@ -43,15 +43,7 @@ const Profile = ({uid}) => {
 
                     <Fragment>
                         <div class="main-content">
-<<<<<<< HEAD
-                            <Nav
-                                img={perfil.photoURL}
-                                userName={perfil.displayName} />
-=======
-                            {/* <Nav
-                                img={user.photoURL}
-                                userName={user.displayName} /> */}
->>>>>>> 4016248de6b414b78b93663aabf6d7a9d0cb6db5
+                            
 
                             <Presentation
                                 fullName="Engels"
@@ -60,7 +52,7 @@ const Profile = ({uid}) => {
                             <div class="container-fluid mt--7">
                                 <div class="row">
 
-                                    <AsideCard photo={perfil.photoURL} name={perfil.displayName} />
+                                    <AsideCard uid={uid} photo={perfil.photoURL} name={perfil.displayName} />
                                     <MyAccount />
                                 </div>
                             </div>

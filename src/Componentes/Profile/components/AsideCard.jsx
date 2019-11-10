@@ -4,7 +4,7 @@ import SocialData from './Aside_Card/Social_Data'
 import Content from './Aside_Card/Content'
 import Buttons from './Aside_Card/Buttons'
 
-const AsideCard = ({photo,name}) => {
+const AsideCard = ({photo,name,uid}) => {
     return (
 
         <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
@@ -14,7 +14,7 @@ const AsideCard = ({photo,name}) => {
                     img={photo}
                 />
 
-                <Buttons/>
+                <Buttons uid={uid}/>
 
                 <div class="card-body pt-0 pt-md-4">
                     <SocialData

@@ -24,10 +24,13 @@ const Profile = ({uid}) => {
 
        async function getDatos(){
 
-          let datos= await firestore.collection("users").doc(uid).get()
+          let datos= await firestore.collection("users").doc(uid).onSnapshot(e=>{
+              
+             
+          console.log(e.data())
+          setPerfil(e.data())
+          })
 
-          console.log(datos.data())
-          setPerfil(datos.data())
 
        } 
 
@@ -43,10 +46,12 @@ const Profile = ({uid}) => {
 
                     <Fragment>
                         <div class="main-content">
-                            
+                            {/* <Nav
+                                img={perfil.photoURL}
+                                userName={perfil.displayName} /> */}
 
                             <Presentation
-                                fullName="Engels"
+                                fullName={perfil.displayName}
                             />
 
                             <div class="container-fluid mt--7">

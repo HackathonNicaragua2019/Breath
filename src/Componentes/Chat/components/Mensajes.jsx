@@ -101,7 +101,7 @@ const Mensajes = (props) => {
             name:user.displayName,
             photo:user.photoURL
         })
-     
+     setContent('')
    } 
 
 
@@ -133,7 +133,7 @@ const Mensajes = (props) => {
 
             <div class="type_msg">
                 <div class="input_msg_write">
-                    <input value={content} onChange={(e)=>{setContent(e.target.value)}} type="text" class="write_msg" placeholder="Type a message" />
+                    <input value={content} onChange={(e)=>{setContent(e.target.value)}} type="text" class="write_msg" placeholder="Escribir un mensaje" />
                     <button onClick={send}  class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                 </div>
             </div>

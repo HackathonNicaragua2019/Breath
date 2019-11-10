@@ -10,14 +10,7 @@ function Info(props) {
                     <div className="h7">{props.description}</div>
                 </div>
                 <ul className="list-group list-group-flush">
-                    <li className="list-group-item">
-                        <div className="h6 color_t">Followers</div>
-                        <div className="h5">{props.followers}</div>
-                    </li>
-                    <li className="list-group-item">
-                        <div className="h6 color_t">Following</div>
-                        <div className="h5">{props.following}</div>
-                    </li>
+                    
                     <li className="list-group-item list-last color_t">{props.contact}</li>
                 </ul>
             </div>

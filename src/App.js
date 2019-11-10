@@ -8,6 +8,7 @@ import Home from './Componentes/Home/Home';
 import {Router,Redirect} from '@reach/router'
 import Profile from './Componentes/Profile/Profile';
 import NotFound from './pages/404';
+import Login from './Componentes/InicioSesion/Login';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Chat path="/chat/:id" ></Chat>
         <Home path="/home" />
         <Profile path="/profile/:uid" /> 
+        <Login path="/login"></Login>
         <NotFound default/>
      </Router>
      <Footer></Footer>

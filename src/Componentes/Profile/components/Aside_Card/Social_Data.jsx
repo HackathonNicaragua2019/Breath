@@ -7,15 +7,15 @@ const Social_Data = (props) => {
                 <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                     <div>
                         <span class="heading">{props.friends}</span>
-                        <span class="description">Friends</span>
+                        <span class="description">Amigos</span>
                     </div>
                     <div>
                         <span class="heading">{props.photos}</span>
-                        <span class="description">Photos</span>
+                        <span class="description">Fotos</span>
                     </div>
                     <div>
                         <span class="heading">{props.comments}</span>
-                        <span class="description">Comments</span>
+                        <span class="description">Comentarios</span>
                     </div>
                 </div>
             </div>

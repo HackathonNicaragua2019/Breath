@@ -4,47 +4,61 @@ import MsgOut from './Msg_out'
 import {firestore,getUserDocument,auth} from './../../../firebase'
 import { UserContext } from './../../../Providers/UserProvider'
 
+
 const Mensajes = (props) => {
 
   const [content,setContent]=useState('')
   const [chats,setChats]=useState(null)
   const user = useContext(UserContext);
-  const [id,setId]=useState(user.uid)                                       
-
-   useEffect(()=>{
-
-    async function getChats(){
-       
-      console.log(id)   
-     let tuid='6a84686b-c022-438f-9a55-066e69643838' //Se recibira como parametro
-     let myid=user.uid 
-     let clave
-     let datos
-     console.log(datos.data()) 
-     console.log(user)
-     console.log("tuid"+tuid) 
-
-
-     if(myid<tuid){
-       clave=myid+tuid
-     }else 
-          clave=tuid+myid
+  //const [id,setId]=useState(props.user.uid)                                       
 
       
-     if (myid!==tuid){
+            useEffect(()=>{
 
-       datos= await firestore.collection("chat").doc(clave).collection("chats").get()
+              async function getChats (){
 
-       console.log(datos) 
 
-     }
+                
+                if( props.user && props.user.uid!==null){
+                    
+                    let tuid='6a84686b-c022-438f-9a55-066e69643838' //Se recibira como parametro
+                    let myid=props.user.uid
+                    let clave
+                    let datos
+                   // console.log(datos.data()) 
+        
+                    console.log("tuid"+tuid) 
+    
+    
+                    if(myid<tuid){
+                        clave=myid+tuid
+                    }else 
+                            clave=tuid+myid
+    
+                        
+                    if (myid!==tuid){
+    
+                        datos= await  firestore.collection("chat").doc(clave).collection("chats").get()
+    
+                        let getD= datos.docs.map(chat=>{
+                          return  chat.data()
+                        })
 
-    } 
-   
-     getChats()
+                        console.log(getD)
+                        setChats(getD)
+    
+                    }
+                    }
+    
+    
+              }
+ 
+               getChats() 
 
-   })
 
+            },[props.user,user])
+
+    
 
    const send=async ()=>{
      
@@ -55,7 +69,7 @@ const Mensajes = (props) => {
      console.log(datos.data()) 
      console.log(user)
      console.log("tuid"+tuid) 
-
+     
 
      if(myid<tuid){
        clave=myid+tuid
@@ -79,34 +93,26 @@ const Mensajes = (props) => {
     return (
         <div class="mesgs">
             <div class="msg_history">
-                <MsgIn
+              {
+                  chats && chats.map(el=>{
+                      console.log(el)
+
+                    return el.enviado==user.uid?  <MsgOut
                     img="https://ptetutorials.com/images/user-profile.png"
-                    message="Test which is a new approach to have all solutions"
+                    message={el.content}
                     time="11:01 AM"
                     date="June 9"
-                />
-                <MsgOut
-                    message="Test which is a new approach to have all solutions"
-                    time="11:01 AM"
-                    date="June 9"
-                />
-                <MsgIn
-                    img="https://ptetutorials.com/images/user-profile.png"
-                    message="Ok Everything it´s ok guys"
-                    time="11:01 AM"
-                    date="June 9"
-                />
-                <MsgOut
-                    message="Apollo University, Delhi, India Test"
-                    time="11:01 AM"
-                    date="June 9"
-                />
-                <MsgIn
-                    img="https://ptetutorials.com/images/user-profile.png"
-                    message="We work directly with our designers and suppliers, and sell direct to you, which means quality, exclusive products, at a price anyone can afford."
-                    time="11:01 AM"
-                    date="June 9"
-                />
+                />: <MsgIn
+                message={el.content}
+                time="11:01 AM"
+                date="June 9"
+            />
+               
+                 
+   
+
+                  })
+              }
             </div>
 
             <div class="type_msg">

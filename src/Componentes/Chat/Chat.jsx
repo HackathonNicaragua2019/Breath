@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useEffect,useContext} from 'react'
 import ChatList from './components/ChatList'
 import HeaderSearch from './components/Header_Search'
 import Mensajes from './components/Mensajes'
 import './style.css'
+import { UserContext } from './../../Providers/UserProvider'
 
 const Chat = (props) => {
 
    console.log(props.id)
+   
+   const user = useContext(UserContext);
+
+  
+    
 
     return (
         <div className="container">
@@ -18,7 +24,7 @@ const Chat = (props) => {
                         <HeaderSearch />
                         <ChatList />
                     </div>
-                    <Mensajes />
+                    <Mensajes user={user && user}/>
                 </div>
                 <p className="text-center top_spac"> Design by <a target="_blank" href="/">Hooks</a></p>
             </div>

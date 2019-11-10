@@ -4,12 +4,12 @@ import Post from './Post'
 import {firestore,auth} from './../../../firebase'
 import moment from 'moment'
 
-const Publication = () => {
+const Publication = ({user}) => {
 
     const [post,setPost]=useState(null)
   
-
-    console.log(post)
+  
+    console.log(user)
    useEffect(()=>{
   
     async function getData(){
@@ -32,6 +32,7 @@ const Publication = () => {
                   console.log(post.data())
                   let data=post.data()
                  return <Post
+                  link={user.uid}
                   id={data.id} 
                   userImage = {data.user.photoURL}
                   userName = {data.user.displayName}

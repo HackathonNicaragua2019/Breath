@@ -2,7 +2,9 @@ import React, { Fragment,useState,useEffect } from 'react'
 import {firestore,auth} from './../../../firebase'
 import './style.css'
 import moment from 'moment'
+import {Link} from '@reach/router'
 const uuidv4 = require('uuid/v4');
+
 const Post = (props) => {
 
    const [idPost,setIdPost]=useState(props.id)
@@ -60,7 +62,7 @@ const Post = (props) => {
                                 <img class="rounded-circle" width="45" src={props.userImage} alt=""/>
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">@{props.userName}</div>
+                                    <Link class="h5 m-0" to={`/profile/${props.link}`} >@{props.userName}</Link>
                                     <div class="h7 text-muted">{props.fullName}</div>
                                 </div>
                             </div>

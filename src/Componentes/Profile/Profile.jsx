@@ -53,7 +53,7 @@ const Profile = ({uid}) => {
                                 <div class="row">
 
                                     <AsideCard uid={uid} photo={perfil.photoURL} name={perfil.displayName} />
-                                    <MyAccount />
+                                    <MyAccount perfil={perfil}/>
                                 </div>
                             </div>
 

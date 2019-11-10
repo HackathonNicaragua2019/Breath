@@ -22,7 +22,7 @@ const Header=()=>{
                   id="navcol-1">
                   <ul class="nav navbar-nav">
                       <li role="presentation" class="nav-item"></li>
-                      <li class="dropdown nav-item"><img data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link rounded" src={ user && user.photoURL}></img>
+                      <li class="dropdown nav-item">Cuenta
                           <div  class="dropdown-menu"><Link role="presentation" class="dropdown-item" to={`/profile/${user&&user.uid}`} >Mi perfil</Link><a role="presentation" class="dropdown-item" href="#">Configuracion de privacidad</a></div>
                       </li>
                   </ul>

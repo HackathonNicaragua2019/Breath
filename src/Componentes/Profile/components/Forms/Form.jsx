@@ -1,25 +1,18 @@
 import React from 'react'
 import Form1 from './Form1'
-import Form2 from './Form2'
+//import Form2 from './Form2'
 import Form3 from './Form3'
 
-const Form = () => {
+const Form = (props) => {
     return (
         <form>
             <h6 class="heading-small text-muted mb-4">User information</h6>
             <Form1
-                userName="lucky.jesse"
-                firstName="Lucky"
-                lastName="Jesse"
+                userName={props.perfil.displayName}
+               
             />
             <hr class="my-4" />
 
-            <h6 class="heading-small text-muted mb-4">Contact information</h6>
-            <Form2
-                address="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                city="New York"
-                country="United States"
-            />
             <hr class="my-4" />
 
             <h6 class="heading-small text-muted mb-4">About me</h6>

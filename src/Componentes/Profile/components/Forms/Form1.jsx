@@ -18,20 +18,7 @@ const Form1 = (props) => {
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="form-group focused">
-                        <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value={props.firstName} />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="form-group focused">
-                        <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value={props.lastName} />
-                    </div>
-                </div>
-            </div>
+           
         </div>                         
     )
 }

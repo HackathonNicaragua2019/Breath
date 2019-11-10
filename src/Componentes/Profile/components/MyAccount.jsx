@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from './Forms/Form'
 
-const MyAccount = () => {
+const MyAccount = (props) => {
     return (
         <div class="col-xl-8 order-xl-1">
             <div class="card bg-secondary shadow">
@@ -19,7 +19,7 @@ const MyAccount = () => {
                 </div>
 
                 <div class="card-body">
-                    <Form/>
+                    <Form perfil={props.perfil} />
                 </div>
 
             </div>

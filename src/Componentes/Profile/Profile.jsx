@@ -4,7 +4,6 @@ import './style.css'
 import { UserContext } from './../../Providers/UserProvider'
 import Login from '../InicioSesion/Login'
 
-import Nav from './components/Nav'
 import Presentation from './components/Presentation'
 import Footer from './components/Footer'
 import AsideCard from './components/AsideCard'
@@ -44,9 +43,15 @@ const Profile = ({uid}) => {
 
                     <Fragment>
                         <div class="main-content">
+<<<<<<< HEAD
                             <Nav
                                 img={perfil.photoURL}
                                 userName={perfil.displayName} />
+=======
+                            {/* <Nav
+                                img={user.photoURL}
+                                userName={user.displayName} /> */}
+>>>>>>> 4016248de6b414b78b93663aabf6d7a9d0cb6db5
 
                             <Presentation
                                 fullName="Engels"

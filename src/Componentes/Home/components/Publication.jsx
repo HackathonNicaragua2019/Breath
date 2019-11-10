@@ -14,9 +14,12 @@ const Publication = ({user}) => {
   
     async function getData(){
 
-       let posts=await firestore.collection("posts").get()
+       let posts=await firestore.collection("posts").onSnapshot(post=>{
+        setPost(post)
+        console.log(post)
+       })
        
-       setPost(posts)
+     
      }
 
      getData()

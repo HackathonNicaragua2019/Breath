@@ -43,15 +43,9 @@ const Profile = ({uid}) => {
 
                     <Fragment>
                         <div class="main-content">
-<<<<<<< HEAD
-                            <Nav
-                                img={perfil.photoURL}
-                                userName={perfil.displayName} />
-=======
                             {/* <Nav
-                                img={user.photoURL}
-                                userName={user.displayName} /> */}
->>>>>>> 4016248de6b414b78b93663aabf6d7a9d0cb6db5
+                                img={perfil.photoURL}
+                                userName={perfil.displayName} /> */}
 
                             <Presentation
                                 fullName="Engels"
